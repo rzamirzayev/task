@@ -1,0 +1,82 @@
+//static void OddOrEven(int eded)
+//{
+
+//    if (eded % 2 == 0)
+//    {
+//        Console.WriteLine("cutdur");
+//    }
+//    else
+//    {
+//        Console.WriteLine("tekdir.");
+//    }
+//}
+//Console.WriteLine("eded daxil edin:");
+//int eded = Convert.ToInt32(Console.ReadLine());
+//OddOrEven(eded);
+
+//task2
+//static bool OddOrEven2(int[] eded)
+//{
+//    for(int i = 0; i < eded.Length; i++)
+//    {
+//        if (eded[i] % 2 == 0) 
+//        {
+//            return true;
+//        }
+
+//    }
+//    return false;
+//}
+//int[] eded = { 97, 1 };
+//Console.WriteLine(OddOrEven2(eded));
+//static int String()
+static void bullet(int Bullet)
+{
+
+    Bullet--;
+    Console.WriteLine("bir mermi atildi." + "qalan mermi sayisi:" + Bullet);
+}
+static void AllBullet(int AllBullet)
+{
+    for (int allBullet = 30; allBullet >= 0; allBullet--)
+    {
+        
+        Console.WriteLine(allBullet);
+        if (allBullet ==0)
+        {
+            Console.WriteLine("HAMISI ATILDI");
+        }
+    }
+    Console.WriteLine("merminin hamisi atildi.");
+}
+static void Reloat(int reloat)
+{
+    Console.WriteLine("Sarjor yenilendi.");
+    reloat = 30;
+    Console.WriteLine(reloat);
+}
+static void exitgame()
+{
+    Console.WriteLine("Oyundan cixdiniz.");
+}
+static void showbullet(int bullet)
+{
+    bullet = 30;
+    Console.WriteLine("mermi sayiniz"+bullet);
+}
+
+Console.WriteLine("1. Gülleni tek tek at\n2. Gullenin hamısını birden at\n3.mermini yenidən doldu\n4. oyundan çıx\n5. mərmi sayını gösdər");
+Console.WriteLine("Hansi secimi etmek istiyirsiniz?");
+int choice=Convert.ToInt32(Console.ReadLine());
+if (choice == 1)
+    bullet(30);
+else if (choice == 2)
+    AllBullet(30);
+else if (choice == 3)
+    Reloat(30);
+else if (choice == 4)
+    exitgame();
+else if (choice == 5)
+    showbullet(30);
+else
+    Console.WriteLine("Duzgun secim daxil etmediz.");
