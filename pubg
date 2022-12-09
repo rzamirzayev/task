@@ -1,35 +1,3 @@
-//static void OddOrEven(int eded)
-//{
-
-//    if (eded % 2 == 0)
-//    {
-//        Console.WriteLine("cutdur");
-//    }
-//    else
-//    {
-//        Console.WriteLine("tekdir.");
-//    }
-//}
-//Console.WriteLine("eded daxil edin:");
-//int eded = Convert.ToInt32(Console.ReadLine());
-//OddOrEven(eded);
-
-//task2
-//static bool OddOrEven2(int[] eded)
-//{
-//    for(int i = 0; i < eded.Length; i++)
-//    {
-//        if (eded[i] % 2 == 0) 
-//        {
-//            return true;
-//        }
-
-//    }
-//    return false;
-//}
-//int[] eded = { 97, 1 };
-//Console.WriteLine(OddOrEven2(eded));
-//static int String()
 static void bullet(int Bullet)
 {
 
