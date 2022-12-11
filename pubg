@@ -1,50 +1,57 @@
-static void bullet(int Bullet)
+int Bullet = 30;
+static void oneshoot(ref int Bullet)
 {
-
-    Bullet--;
-    Console.WriteLine("bir mermi atildi." + "qalan mermi sayisi:" + Bullet);
-}
-static void AllBullet(int AllBullet)
-{
-    for (int allBullet = 30; allBullet >= 0; allBullet--)
-    {
-        
-        Console.WriteLine(allBullet);
-        if (allBullet ==0)
-        {
-            Console.WriteLine("HAMISI ATILDI");
-        }
+    if (Bullet > 0) {
+        Bullet--;
+        Console.WriteLine("bir mermi atildi." + "qalan mermi sayisi:" + Bullet);
     }
-    Console.WriteLine("merminin hamisi atildi.");
+    else
+        Console.WriteLine("silahda mermi yoxdur");
 }
-static void Reloat(int reloat)
+static void AllBullet(ref int Bullet)
 {
+    if (Bullet > 0) {
+        Bullet = 0;
+        Console.WriteLine("merminin hamisi atildi.");
+    }
+    else
+        Console.WriteLine("silahda mermi yoxdur");
+  
+}
+static void Reload(ref int Bullet)
+{
+    
     Console.WriteLine("Sarjor yenilendi.");
-    reloat = 30;
-    Console.WriteLine(reloat);
+    Bullet = 30;
+    Console.WriteLine(Bullet+" mermi");
 }
 static void exitgame()
 {
     Console.WriteLine("Oyundan cixdiniz.");
 }
-static void showbullet(int bullet)
+static void showbullet(ref int Bullet)
 {
-    bullet = 30;
-    Console.WriteLine("mermi sayiniz"+bullet);
+    
+    Console.WriteLine("mermi sayiniz:" + Bullet);
 }
 
 Console.WriteLine("1. Gülleni tek tek at\n2. Gullenin hamısını birden at\n3.mermini yenidən doldu\n4. oyundan çıx\n5. mərmi sayını gösdər");
 Console.WriteLine("Hansi secimi etmek istiyirsiniz?");
-int choice=Convert.ToInt32(Console.ReadLine());
-if (choice == 1)
-    bullet(30);
-else if (choice == 2)
-    AllBullet(30);
-else if (choice == 3)
-    Reloat(30);
-else if (choice == 4)
-    exitgame();
-else if (choice == 5)
-    showbullet(30);
-else
-    Console.WriteLine("Duzgun secim daxil etmediz.");
+int choice;
+
+do
+{
+    choice = Convert.ToInt32(Console.ReadLine());
+    if (choice == 1)
+        oneshoot(ref Bullet);
+    else if (choice == 2)
+        AllBullet(ref Bullet);
+    else if (choice == 3)
+        Reload(ref Bullet);
+    else if (choice == 5)
+        showbullet(ref Bullet);
+    else
+        Console.WriteLine("duzgun secim edin.");
+}while(choice != 4);
+if(choice==4)
+    exitgame(); 
