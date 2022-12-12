@@ -50,8 +50,8 @@ do
         Reload(ref Bullet);
     else if (choice == 5)
         showbullet(ref Bullet);
-    else
+    else if(choice!=4)
         Console.WriteLine("duzgun secim edin.");
 }while(choice != 4);
-if(choice==4)
-    exitgame(); 
+
+exitgame(); 
