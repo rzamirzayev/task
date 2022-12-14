@@ -1,21 +1,13 @@
-Console.WriteLine("Cumlenizi daxil edin:");
-string cumle= Console.ReadLine();
-string reverse = "";
-List<String> list = new List<String>();
+string sentence = Console.ReadLine();
+string reversesentence = "";
 
-foreach (var arr in cumle.Split(' '))
+foreach (var word in sentence.Split(' '))
 {
-    list.Add(arr);
-}
-foreach (var item in list)
-{
-    for (int i = item.Length - 1; i >= 0; i--)
+    string temp = "";
+    foreach (var ch in word.ToCharArray())
     {
-        reverse += item[i];
-        if (i == 0)
-        {
-            reverse += ' ';
-        }
+        temp = ch + temp;
     }
+    reversesentence = reversesentence + temp + "";
 }
-Console.WriteLine(reverse);
+Console.WriteLine(reversesentence);
